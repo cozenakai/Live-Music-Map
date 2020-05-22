@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19CF71F62478438F0030C461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF71F52478438F0030C461 /* AppDelegate.swift */; };
+		19CF71F82478438F0030C461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF71F72478438F0030C461 /* SceneDelegate.swift */; };
+		19CF71FA2478438F0030C461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF71F92478438F0030C461 /* ViewController.swift */; };
+		19CF71FD2478438F0030C461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CF71FB2478438F0030C461 /* Main.storyboard */; };
+		19CF71FF247843950030C461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CF71FE247843950030C461 /* Assets.xcassets */; };
+		19CF7202247843950030C461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CF7200247843950030C461 /* LaunchScreen.storyboard */; };
+		19CF720D247843950030C461 /* Live_Music_MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF720C247843950030C461 /* Live_Music_MapTests.swift */; };
+		19CF7218247843950030C461 /* Live_Music_MapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF7217247843950030C461 /* Live_Music_MapUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19CF7209247843950030C461 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19CF71EA2478438F0030C461 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19CF71F12478438F0030C461;
+			remoteInfo = "Live Music Map";
+		};
+		19CF7214247843950030C461 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19CF71EA2478438F0030C461 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19CF71F12478438F0030C461;
+			remoteInfo = "Live Music Map";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19CF71F22478438F0030C461 /* Live Music Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Live Music Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19CF71F52478438F0030C461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		19CF71F72478438F0030C461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		19CF71F92478438F0030C461 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		19CF71FC2478438F0030C461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19CF71FE247843950030C461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19CF7201247843950030C461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19CF7203247843950030C461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19CF7208247843950030C461 /* Live Music MapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Live Music MapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19CF720C247843950030C461 /* Live_Music_MapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live_Music_MapTests.swift; sourceTree = "<group>"; };
+		19CF720E247843950030C461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19CF7213247843950030C461 /* Live Music MapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Live Music MapUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19CF7217247843950030C461 /* Live_Music_MapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live_Music_MapUITests.swift; sourceTree = "<group>"; };
+		19CF7219247843950030C461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19CF71EF2478438F0030C461 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19CF7205247843950030C461 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19CF7210247843950030C461 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19CF71E92478438F0030C461 = {
+			isa = PBXGroup;
+			children = (
+				19CF71F42478438F0030C461 /* Live Music Map */,
+				19CF720B247843950030C461 /* Live Music MapTests */,
+				19CF7216247843950030C461 /* Live Music MapUITests */,
+				19CF71F32478438F0030C461 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19CF71F32478438F0030C461 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19CF71F22478438F0030C461 /* Live Music Map.app */,
+				19CF7208247843950030C461 /* Live Music MapTests.xctest */,
+				19CF7213247843950030C461 /* Live Music MapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19CF71F42478438F0030C461 /* Live Music Map */ = {
+			isa = PBXGroup;
+			children = (
+				19CF71F52478438F0030C461 /* AppDelegate.swift */,
+				19CF71F72478438F0030C461 /* SceneDelegate.swift */,
+				19CF71F92478438F0030C461 /* ViewController.swift */,
+				19CF71FB2478438F0030C461 /* Main.storyboard */,
+				19CF71FE247843950030C461 /* Assets.xcassets */,
+				19CF7200247843950030C461 /* LaunchScreen.storyboard */,
+				19CF7203247843950030C461 /* Info.plist */,
+			);
+			path = "Live Music Map";
+			sourceTree = "<group>";
+		};
+		19CF720B247843950030C461 /* Live Music MapTests */ = {
+			isa = PBXGroup;
+			children = (
+				19CF720C247843950030C461 /* Live_Music_MapTests.swift */,
+				19CF720E247843950030C461 /* Info.plist */,
+			);
+			path = "Live Music MapTests";
+			sourceTree = "<group>";
+		};
+		19CF7216247843950030C461 /* Live Music MapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				19CF7217247843950030C461 /* Live_Music_MapUITests.swift */,
+				19CF7219247843950030C461 /* Info.plist */,
+			);
+			path = "Live Music MapUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19CF71F12478438F0030C461 /* Live Music Map */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19CF721C247843950030C461 /* Build configuration list for PBXNativeTarget "Live Music Map" */;
+			buildPhases = (
+				19CF71EE2478438F0030C461 /* Sources */,
+				19CF71EF2478438F0030C461 /* Frameworks */,
+				19CF71F02478438F0030C461 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Live Music Map";
+			productName = "Live Music Map";
+			productReference = 19CF71F22478438F0030C461 /* Live Music Map.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19CF7207247843950030C461 /* Live Music MapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19CF721F247843950030C461 /* Build configuration list for PBXNativeTarget "Live Music MapTests" */;
+			buildPhases = (
+				19CF7204247843950030C461 /* Sources */,
+				19CF7205247843950030C461 /* Frameworks */,
+				19CF7206247843950030C461 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19CF720A247843950030C461 /* PBXTargetDependency */,
+			);
+			name = "Live Music MapTests";
+			productName = "Live Music MapTests";
+			productReference = 19CF7208247843950030C461 /* Live Music MapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		19CF7212247843950030C461 /* Live Music MapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19CF7222247843950030C461 /* Build configuration list for PBXNativeTarget "Live Music MapUITests" */;
+			buildPhases = (
+				19CF720F247843950030C461 /* Sources */,
+				19CF7210247843950030C461 /* Frameworks */,
+				19CF7211247843950030C461 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19CF7215247843950030C461 /* PBXTargetDependency */,
+			);
+			name = "Live Music MapUITests";
+			productName = "Live Music MapUITests";
+			productReference = 19CF7213247843950030C461 /* Live Music MapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19CF71EA2478438F0030C461 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Masaki Chonan";
+				TargetAttributes = {
+					19CF71F12478438F0030C461 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					19CF7207247843950030C461 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 19CF71F12478438F0030C461;
+					};
+					19CF7212247843950030C461 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 19CF71F12478438F0030C461;
+					};
+				};
+			};
+			buildConfigurationList = 19CF71ED2478438F0030C461 /* Build configuration list for PBXProject "Live Music Map" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19CF71E92478438F0030C461;
+			productRefGroup = 19CF71F32478438F0030C461 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19CF71F12478438F0030C461 /* Live Music Map */,
+				19CF7207247843950030C461 /* Live Music MapTests */,
+				19CF7212247843950030C461 /* Live Music MapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19CF71F02478438F0030C461 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19CF7202247843950030C461 /* LaunchScreen.storyboard in Resources */,
+				19CF71FF247843950030C461 /* Assets.xcassets in Resources */,
+				19CF71FD2478438F0030C461 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19CF7206247843950030C461 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19CF7211247843950030C461 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19CF71EE2478438F0030C461 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19CF71FA2478438F0030C461 /* ViewController.swift in Sources */,
+				19CF71F62478438F0030C461 /* AppDelegate.swift in Sources */,
+				19CF71F82478438F0030C461 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19CF7204247843950030C461 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19CF720D247843950030C461 /* Live_Music_MapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19CF720F247843950030C461 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19CF7218247843950030C461 /* Live_Music_MapUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19CF720A247843950030C461 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19CF71F12478438F0030C461 /* Live Music Map */;
+			targetProxy = 19CF7209247843950030C461 /* PBXContainerItemProxy */;
+		};
+		19CF7215247843950030C461 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19CF71F12478438F0030C461 /* Live Music Map */;
+			targetProxy = 19CF7214247843950030C461 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		19CF71FB2478438F0030C461 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19CF71FC2478438F0030C461 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19CF7200247843950030C461 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19CF7201247843950030C461 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19CF721A247843950030C461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19CF721B247843950030C461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19CF721D247843950030C461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Live Music Map/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.lifeistech.Live-Music-Map";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19CF721E247843950030C461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Live Music Map/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.lifeistech.Live-Music-Map";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		19CF7220247843950030C461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Live Music MapTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.lifeistech.Live-Music-MapTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Live Music Map.app/Live Music Map";
+			};
+			name = Debug;
+		};
+		19CF7221247843950030C461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Live Music MapTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.lifeistech.Live-Music-MapTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Live Music Map.app/Live Music Map";
+			};
+			name = Release;
+		};
+		19CF7223247843950030C461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Live Music MapUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.lifeistech.Live-Music-MapUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Live Music Map";
+			};
+			name = Debug;
+		};
+		19CF7224247843950030C461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Live Music MapUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.lifeistech.Live-Music-MapUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Live Music Map";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19CF71ED2478438F0030C461 /* Build configuration list for PBXProject "Live Music Map" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19CF721A247843950030C461 /* Debug */,
+				19CF721B247843950030C461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19CF721C247843950030C461 /* Build configuration list for PBXNativeTarget "Live Music Map" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19CF721D247843950030C461 /* Debug */,
+				19CF721E247843950030C461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19CF721F247843950030C461 /* Build configuration list for PBXNativeTarget "Live Music MapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19CF7220247843950030C461 /* Debug */,
+				19CF7221247843950030C461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19CF7222247843950030C461 /* Build configuration list for PBXNativeTarget "Live Music MapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19CF7223247843950030C461 /* Debug */,
+				19CF7224247843950030C461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19CF71EA2478438F0030C461 /* Project object */;
+}
