@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		197C06DD247D73B2004C27EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C06DC247D73B2004C27EE /* DetailViewController.swift */; };
+		197C06DF247D9205004C27EE /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C06DE247D9205004C27EE /* GuideViewController.swift */; };
 		19CF71F62478438F0030C461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF71F52478438F0030C461 /* AppDelegate.swift */; };
 		19CF71F82478438F0030C461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF71F72478438F0030C461 /* SceneDelegate.swift */; };
 		19CF71FA2478438F0030C461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF71F92478438F0030C461 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		197C06DC247D73B2004C27EE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		197C06DE247D9205004C27EE /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		19CF71F22478438F0030C461 /* Live Music Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Live Music Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CF71F52478438F0030C461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19CF71F72478438F0030C461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				19CF7200247843950030C461 /* LaunchScreen.storyboard */,
 				19CF7203247843950030C461 /* Info.plist */,
 				197C06DC247D73B2004C27EE /* DetailViewController.swift */,
+				197C06DE247D9205004C27EE /* GuideViewController.swift */,
 			);
 			path = "Live Music Map";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				19CF71FA2478438F0030C461 /* ViewController.swift in Sources */,
 				19CF71F62478438F0030C461 /* AppDelegate.swift in Sources */,
 				19CF71F82478438F0030C461 /* SceneDelegate.swift in Sources */,
+				197C06DF247D9205004C27EE /* GuideViewController.swift in Sources */,
 				197C06DD247D73B2004C27EE /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  GuideViewController.swift
 //  Live Music Map
 //
 //  Created by Masaki Chonan on 2020/05/27.
@@ -9,29 +9,26 @@
 import UIKit
 import MapKit
 
-class DetailViewController: UIViewController, MKMapViewDelegate{
-    
+class GuideViewController: UIViewController, MKMapViewDelegate{
     
     @IBOutlet var mapView:MKMapView!
-    @IBOutlet weak var button: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setSwipeBack()
 
         // Do any additional setup after loading the view.
-        var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude:35.658517 , longitude:139.70133399999997 ), latitudinalMeters: 500, longitudinalMeters: 500)
+        
+        var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.658517, longitude: 139.70133399999997), latitudinalMeters: 500, longitudinalMeters: 500)
         mapView.setRegion(region, animated: false)
         
         var pin = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 35.6581, longitude: 139.7017))
         
         mapView.addAnnotation(pin)
-        
-        self.button.layer.borderColor = UIColor.black.cgColor
-        self.button.layer.borderWidth = 3.0
     }
     
-    
+
     /*
     // MARK: - Navigation
 
@@ -42,4 +39,13 @@ class DetailViewController: UIViewController, MKMapViewDelegate{
     }
     */
 
+}
+
+extension UIViewController {
+
+    func setSwipeBack() {
+        let target = self.navigationController?.value(forKey: "_cachedInteractionController")
+        let recognizer = UIPanGestureRecognizer(target: target, action: Selector(("handleNavigationTransition:")))
+        self.view.addGestureRecognizer(recognizer)
+    }
 }

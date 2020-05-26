@@ -99,24 +99,72 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yh7-2s-PYh">
                                 <rect key="frame" x="0.0" y="378" width="414" height="430"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5A-uI-ui3">
+                                <rect key="frame" x="85" y="720" width="244" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Go Live!">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5Sy-Pd-yEN" kind="show" id="8gM-7q-9Qh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="DtA-DI-0nV" firstAttribute="trailing" secondItem="V5A-uI-ui3" secondAttribute="trailing" constant="85" id="2gq-r4-27H"/>
+                            <constraint firstItem="DtA-DI-0nV" firstAttribute="bottom" secondItem="V5A-uI-ui3" secondAttribute="bottom" constant="19" id="3qb-Nw-lEo"/>
                             <constraint firstItem="DtA-DI-0nV" firstAttribute="bottom" secondItem="yh7-2s-PYh" secondAttribute="bottom" id="FCo-2S-kFR"/>
                             <constraint firstItem="yh7-2s-PYh" firstAttribute="top" secondItem="r03-Pr-aDv" secondAttribute="bottom" id="ICy-hi-xiN"/>
+                            <constraint firstItem="V5A-uI-ui3" firstAttribute="top" secondItem="r03-Pr-aDv" secondAttribute="bottom" constant="342" id="LgR-QE-LeX"/>
                             <constraint firstItem="yh7-2s-PYh" firstAttribute="leading" secondItem="DtA-DI-0nV" secondAttribute="leading" id="VF7-4z-XqE"/>
                             <constraint firstItem="DtA-DI-0nV" firstAttribute="trailing" secondItem="r03-Pr-aDv" secondAttribute="trailing" id="WOu-IK-asX"/>
                             <constraint firstItem="DtA-DI-0nV" firstAttribute="trailing" secondItem="yh7-2s-PYh" secondAttribute="trailing" id="Z2B-UK-Fls"/>
                             <constraint firstItem="r03-Pr-aDv" firstAttribute="top" secondItem="DtA-DI-0nV" secondAttribute="top" id="d2H-KA-Ish"/>
                             <constraint firstItem="r03-Pr-aDv" firstAttribute="leading" secondItem="DtA-DI-0nV" secondAttribute="leading" id="eR1-qw-zKv"/>
+                            <constraint firstItem="V5A-uI-ui3" firstAttribute="leading" secondItem="DtA-DI-0nV" secondAttribute="leading" constant="85" id="pAz-73-EjC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DtA-DI-0nV"/>
                     </view>
                     <navigationItem key="navigationItem" id="RZD-l3-spq"/>
+                    <connections>
+                        <outlet property="button" destination="V5A-uI-ui3" id="OGQ-5Q-wqo"/>
+                        <outlet property="mapView" destination="yh7-2s-PYh" id="S4b-v6-uxy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sib-ew-VHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="902.89855072463774" y="104.46428571428571"/>
+        </scene>
+        <!--Guide View Controller-->
+        <scene sceneID="nTi-gd-wR3">
+            <objects>
+                <viewController id="5Sy-Pd-yEN" customClass="GuideViewController" customModule="Live_Music_Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6PD-uJ-myl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="plR-bZ-ldn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="plR-bZ-ldn" firstAttribute="top" secondItem="fTY-kJ-Jm1" secondAttribute="top" id="BGi-L4-VPK"/>
+                            <constraint firstItem="fTY-kJ-Jm1" firstAttribute="bottom" secondItem="plR-bZ-ldn" secondAttribute="bottom" id="MQy-UA-gzN"/>
+                            <constraint firstItem="fTY-kJ-Jm1" firstAttribute="trailing" secondItem="plR-bZ-ldn" secondAttribute="trailing" id="Urz-Bt-q31"/>
+                            <constraint firstItem="plR-bZ-ldn" firstAttribute="leading" secondItem="fTY-kJ-Jm1" secondAttribute="leading" id="XiU-WO-ekk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fTY-kJ-Jm1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tWt-Ws-Rbn"/>
+                    <connections>
+                        <outlet property="mapView" destination="plR-bZ-ldn" id="XNS-Ia-WPy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIc-eM-h4g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1775" y="102"/>
         </scene>
     </scenes>
     <resources>
