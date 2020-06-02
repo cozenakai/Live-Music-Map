@@ -17,15 +17,18 @@ class DetailViewController: UIViewController, MKMapViewDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSwipeBack()
 
         // Do any additional setup after loading the view.
         var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude:35.658517 , longitude:139.70133399999997 ), latitudinalMeters: 500, longitudinalMeters: 500)
         mapView.setRegion(region, animated: false)
         
-        var pin = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 35.6581, longitude: 139.7017))
-        
-        mapView.addAnnotation(pin)
+       var latitudes = [35.6582, 35.6576, 35.332820]
+              var longitudes = [139.7018, 139.7019, 139.447457]
+              
+              for i in 0..<latitudes.count{
+                  var pin = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: latitudes[i], longitude: longitudes[i]))
+                  mapView.addAnnotation(pin)
+              }
         
         self.button.layer.borderColor = UIColor.black.cgColor
         self.button.layer.borderWidth = 3.0
@@ -43,3 +46,5 @@ class DetailViewController: UIViewController, MKMapViewDelegate{
     */
 
 }
+
+
