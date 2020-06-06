@@ -22,7 +22,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         CLLocationManager.locationServicesEnabled()
         locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.distanceFilter = kCLDistanceFilterNone
+        self.locationManager.distanceFilter = 10
         
         if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.notDetermined{
             
@@ -36,14 +36,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.locationManager.startUpdatingHeading()
 
         
-        var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude:35.658517, longitude: 139.70133399999997), latitudinalMeters: 500, longitudinalMeters: 500)
-        mapView.setRegion(region, animated: false)
+//        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude:35.658517, longitude: 139.70133399999997), latitudinalMeters: 500, longitudinalMeters: 500)
+//        mapView.setRegion(region, animated: false)
         
-        var latitudes = [35.6582, 35.6576, 35.332820]
-        var longitudes = [139.7018, 139.7019, 139.447457]
+        let latitudes = [35.6582, 35.6576, 35.332820]
+        let longitudes = [139.7018, 139.7019, 139.447457]
         
         for i in 0..<latitudes.count{
-            var pin = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: latitudes[i], longitude: longitudes[i]))
+            let pin = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: latitudes[i], longitude: longitudes[i]))
             mapView.addAnnotation(pin)
         }
         
@@ -54,7 +54,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        var region = MKCoordinateRegion(center: locations[0].coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+        let region = MKCoordinateRegion(center: locations[0].coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
                mapView.setRegion(region, animated: false)
     }
     override func didReceiveMemoryWarning() {
@@ -62,4 +62,5 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         // Dispose of any resources that can be recreated.
     }
 }
+
 
