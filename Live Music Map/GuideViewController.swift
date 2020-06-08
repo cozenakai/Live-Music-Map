@@ -13,6 +13,7 @@ import CoreLocation
 class GuideViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
     
     @IBOutlet var mapView:MKMapView!
+    
     var locationManager = CLLocationManager()
     var pins = [MKPlacemark]()
     
@@ -57,8 +58,8 @@ class GuideViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let directionRequest = MKDirections.Request()
         directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: locations[0].coordinate))
-        directionRequest.destination = MKMapItem (placemark: pins[2])
-        directionRequest.transportType = .automobile
+        directionRequest.destination = MKMapItem (placemark: pins[1])
+        directionRequest.transportType = .walking
         
         let directions = MKDirections(request: directionRequest)
         
@@ -85,8 +86,10 @@ class GuideViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer{
         let renderer = MKPolylineRenderer(overlay: overlay)
         renderer.strokeColor = UIColor.blue
-        renderer.lineWidth = 4.0
+        renderer.lineWidth = 8.0
         return renderer
+    }
+    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
     }
     
 }

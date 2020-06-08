@@ -21,11 +21,20 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Bln-ka-pmy"/>
                                 </connections>
                             </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="g93-ke-nga">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="g93-ke-nga" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4bt-bs-Anb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x81-aY-79n" secondAttribute="bottom" id="AxZ-vD-Fju"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x81-aY-79n" secondAttribute="trailing" id="F0x-t8-U1B"/>
+                            <constraint firstItem="g93-ke-nga" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="T61-00-RZH"/>
+                            <constraint firstItem="g93-ke-nga" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="USn-64-eTx"/>
+                            <constraint firstItem="g93-ke-nga" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iUG-7S-3Ab"/>
                             <constraint firstItem="x81-aY-79n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ra5-YT-67p"/>
                             <constraint firstItem="x81-aY-79n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wyh-9I-YIp"/>
                         </constraints>
@@ -149,11 +158,27 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="plR-bZ-ldn">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG4-dI-BHM">
+                                <rect key="frame" x="176" y="729" width="63" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="rda-a5-wes"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="終了">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jWN-Gb-Tiw" kind="unwind" unwindAction="backWithSender:" id="leC-iw-AJm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="fTY-kJ-Jm1" firstAttribute="trailing" secondItem="PG4-dI-BHM" secondAttribute="trailing" constant="175" id="6nt-8K-WL8"/>
                             <constraint firstItem="plR-bZ-ldn" firstAttribute="top" secondItem="fTY-kJ-Jm1" secondAttribute="top" id="BGi-L4-VPK"/>
+                            <constraint firstItem="fTY-kJ-Jm1" firstAttribute="bottom" secondItem="PG4-dI-BHM" secondAttribute="bottom" constant="19" id="IB9-N1-YW9"/>
                             <constraint firstItem="fTY-kJ-Jm1" firstAttribute="bottom" secondItem="plR-bZ-ldn" secondAttribute="bottom" id="MQy-UA-gzN"/>
+                            <constraint firstItem="PG4-dI-BHM" firstAttribute="leading" secondItem="fTY-kJ-Jm1" secondAttribute="leading" constant="176" id="PPv-8A-ybi"/>
                             <constraint firstItem="fTY-kJ-Jm1" firstAttribute="trailing" secondItem="plR-bZ-ldn" secondAttribute="trailing" id="Urz-Bt-q31"/>
                             <constraint firstItem="plR-bZ-ldn" firstAttribute="leading" secondItem="fTY-kJ-Jm1" secondAttribute="leading" id="XiU-WO-ekk"/>
                         </constraints>
@@ -165,6 +190,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIc-eM-h4g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="jWN-Gb-Tiw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1775" y="102"/>
         </scene>
