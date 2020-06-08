@@ -22,7 +22,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         CLLocationManager.locationServicesEnabled()
         locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.distanceFilter = 10
+        self.locationManager.distanceFilter = 5
         
         if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.notDetermined{
             
