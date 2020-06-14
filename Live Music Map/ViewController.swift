@@ -10,11 +10,47 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
+extension UISearchBar {
+    func disableBlur() {
+      backgroundImage = UIImage()
+      isTranslucent = true
+    }
+    
+    var textField: UITextField? {
+        if #available(iOS 13.0, *) {
+            return searchTextField
+        } else {
+            return value(forKey: "_searchField") as? UITextField
+        }
+    }
+}
+
+extension UITextField{
+    var rightButton: UIButton? {
+        return leftView as? UIButton
+    }
+}
+//extension UIButton {
+//  func becomeImageAlwaysTemplate() {
+//  }
+//}
+//
+//extension UIImageView {
+//  func becomeImageAlwaysTemplate() {
+//    image = image?.withRenderingMode(.alwaysTemplate)
+//  }
+//}
+
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITextFieldDelegate{
     
     
     @IBOutlet var mapView:MKMapView!
     var locationManager = CLLocationManager()
+    @IBOutlet weak var inputText: UISearchBar!
+    //    @IBOutlet weak var Map: MKMapView!
+    
+    let coordinates = [CLLocationCoordinate2D(latitude: 35.6582, longitude: 139.7018), CLLocationCoordinate2D(latitude: 35.6576, longitude: 139.7019), CLLocationCoordinate2D(latitude: 35.332820, longitude: 139.447457)]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,11 +81,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         //        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude:35.658517, longitude: 139.70133399999997), latitudinalMeters: 500, longitudinalMeters: 500)
         //        mapView.setRegion(region, animated: false)
         
-        let latitudes = [35.6582, 35.6576, 35.332820]
-        let longitudes = [139.7018, 139.7019, 139.447457]
+//        let latitudes = [35.6582, 35.6576, 35.332820]
+//        let longitudes = [139.7018, 139.7019, 139.447457]
         
-        for i in 0..<latitudes.count{
-            let pin = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: latitudes[i], longitude: longitudes[i]))
+        for i in 0 ..< coordinates.count{
+            let pin = MKPlacemark(coordinate: coordinates[i])
             mapView.addAnnotation(pin)
         }
         
@@ -59,7 +95,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
         performSegue(withIdentifier: "tapped", sender: self)
+        coordinates.firstIndex(where: {$0.latitude == view.annotation!.coordinate.latitude && $0.longitude == view.annotation!.coordinate.longitude})
+        pinInformation = coordinates.firstIndex(where: {$0.latitude == view.annotation!.coordinate.latitude && $0.longitude == view.annotation!.coordinate.longitude})
+        print(pinInformation!)
     }
+    var pinInformation :Int?
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         let myPinnIdentifier = "PinAnnotationIdentifier"
         
@@ -97,6 +137,22 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! DetailViewController
+        vc.artistLocation = pinInformation!
+        switch pinInformation! {
+        case 0:
+            vc.artistName = "Masaki"
+        case 1:
+            vc.artistName = "Kazuya"
+        case 2:
+            vc.artistName = "Masami"
+        default:
+            vc.artistName = "NO NAME"
+        }
+        let vo = segue.destination as! GuideViewController
+        vo.artistLocation = pinInformation!
     }
 }
 

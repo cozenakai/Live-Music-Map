@@ -22,25 +22,28 @@
                                 </connections>
                             </mapView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="g93-ke-nga">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="86z-yl-F6b"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="g93-ke-nga" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4bt-bs-Anb"/>
+                            <constraint firstItem="g93-ke-nga" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="54X-oI-MbC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x81-aY-79n" secondAttribute="bottom" id="AxZ-vD-Fju"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x81-aY-79n" secondAttribute="trailing" id="F0x-t8-U1B"/>
-                            <constraint firstItem="g93-ke-nga" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="T61-00-RZH"/>
-                            <constraint firstItem="g93-ke-nga" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="USn-64-eTx"/>
-                            <constraint firstItem="g93-ke-nga" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iUG-7S-3Ab"/>
+                            <constraint firstItem="g93-ke-nga" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dhL-m0-KKe"/>
+                            <constraint firstItem="g93-ke-nga" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qMN-6L-kov"/>
                             <constraint firstItem="x81-aY-79n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ra5-YT-67p"/>
                             <constraint firstItem="x81-aY-79n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wyh-9I-YIp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="inputText" destination="g93-ke-nga" id="ftE-bA-kMu"/>
                         <outlet property="mapView" destination="x81-aY-79n" id="Mmd-LS-hcf"/>
                         <segue destination="RXu-3N-0uy" kind="show" identifier="tapped" id="Kv3-6K-7mn"/>
                     </connections>
@@ -139,7 +142,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="RZD-l3-spq"/>
                     <connections>
+                        <outlet property="Imageview" destination="DOy-d7-ZBo" id="SKG-i6-faj"/>
                         <outlet property="button" destination="V5A-uI-ui3" id="OGQ-5Q-wqo"/>
+                        <outlet property="label" destination="ngj-OK-XEm" id="bqy-M9-Xj2"/>
+                        <outlet property="labelMusic1" destination="xHM-FR-z4q" id="dgV-tU-NZD"/>
+                        <outlet property="labelMusic2" destination="bmh-PW-7kU" id="BKz-k3-KcA"/>
+                        <outlet property="labelMusic3" destination="8LS-vy-zap" id="9io-LY-MqL"/>
                         <outlet property="mapView" destination="yh7-2s-PYh" id="S4b-v6-uxy"/>
                     </connections>
                 </viewController>

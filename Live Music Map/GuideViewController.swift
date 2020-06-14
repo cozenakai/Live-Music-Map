@@ -16,6 +16,7 @@ class GuideViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     
     var locationManager = CLLocationManager()
     var pins = [MKPlacemark]()
+    var artistLocation : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +59,7 @@ class GuideViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let directionRequest = MKDirections.Request()
         directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: locations[0].coordinate))
-        directionRequest.destination = MKMapItem (placemark: pins[1])
+        directionRequest.destination = MKMapItem (placemark: pins[artistLocation!])
         directionRequest.transportType = .walking
         
         let directions = MKDirections(request: directionRequest)

@@ -15,10 +15,23 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     
     @IBOutlet var mapView:MKMapView!
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var Imageview: UIImageView!
+    @IBOutlet weak var labelMusic1: UIButton!
+    @IBOutlet weak var labelMusic2: UIButton!
+    @IBOutlet weak var labelMusic3: UIButton!
+    
     var locationManager = CLLocationManager()
     var pins = [MKPlacemark]()
+    var artistName = ""
+    var artistLocation : Int?
+    let coordinates = [CLLocationCoordinate2D(latitude: 35.6582, longitude: 139.7018), CLLocationCoordinate2D(latitude: 35.6576, longitude: 139.7019), CLLocationCoordinate2D(latitude: 35.332820, longitude: 139.447457)]
+    
+    
+    
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         CLLocationManager.locationServicesEnabled()
@@ -38,14 +51,15 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         //        mapView.setRegion(region, animated: false)
         
         
-        let latitudes = [35.6582, 35.6576, 35.332820]
-        let longitudes = [139.7018, 139.7019, 139.447457]
+//        let coordinates = [CLLocationCoordinate2D(latitude: 35.6582, longitude: 139.7018), CLLocationCoordinate2D(latitude: 35.6576, longitude: 139.7019), CLLocationCoordinate2D(latitude: 35.332820, longitude: 139.447457)]
+////        let longitudes = [139.7018, 139.7019, 139.447457]
         
-        for i in 0..<latitudes.count{
-            let pin = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: latitudes[i], longitude: longitudes[i]))
+        for i in 0 ..< coordinates.count{
+            let pin = MKPlacemark(coordinate: coordinates[i])
             mapView.addAnnotation(pin)
             pins.append(pin)
         }
+        label.text = artistName
         
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 3.0
@@ -53,6 +67,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         performSegue(withIdentifier: "tapped", sender: self)
+//        firstindexで1個目から見てみてwhereの中がtrueになるものを探す　$0 一つ目の引数　　mkplaxemark
     }
     //
     //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -63,7 +78,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let directionRequest = MKDirections.Request()
         directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: locations[0].coordinate))
-        directionRequest.destination = MKMapItem (placemark: pins[1])
+        directionRequest.destination = MKMapItem (placemark: pins[artistLocation!])
         directionRequest.transportType = .walking
         
         
