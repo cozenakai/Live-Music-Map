@@ -51,8 +51,8 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         //        mapView.setRegion(region, animated: false)
         
         
-//        let coordinates = [CLLocationCoordinate2D(latitude: 35.6582, longitude: 139.7018), CLLocationCoordinate2D(latitude: 35.6576, longitude: 139.7019), CLLocationCoordinate2D(latitude: 35.332820, longitude: 139.447457)]
-////        let longitudes = [139.7018, 139.7019, 139.447457]
+        //        let coordinates = [CLLocationCoordinate2D(latitude: 35.6582, longitude: 139.7018), CLLocationCoordinate2D(latitude: 35.6576, longitude: 139.7019), CLLocationCoordinate2D(latitude: 35.332820, longitude: 139.447457)]
+        ////        let longitudes = [139.7018, 139.7019, 139.447457]
         
         for i in 0 ..< coordinates.count{
             let pin = MKPlacemark(coordinate: coordinates[i])
@@ -67,7 +67,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         performSegue(withIdentifier: "tapped", sender: self)
-//        firstindexで1個目から見てみてwhereの中がtrueになるものを探す　$0 一つ目の引数　　mkplaxemark
+        //        firstindexで1個目から見てみてwhereの中がtrueになるものを探す　$0 一つ目の引数　　mkplaxemark
     }
     //
     //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
