@@ -24,9 +24,13 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     var locationManager = CLLocationManager()
     var pins = [MKPlacemark]()
     var artistName = ""
-    var artistLocation : Int?
-    let coordinates = [CLLocationCoordinate2D(latitude: 35.6582, longitude: 139.7018), CLLocationCoordinate2D(latitude: 35.6576, longitude: 139.7019), CLLocationCoordinate2D(latitude: 35.332820, longitude: 139.447457)]
+    var artistphoto = UIImage(named: "")
+    var demo1 = ""
+    var demo2 = ""
+    var demo3 = ""
     
+    var artistLocation : Int?
+     let coordinates = [CLLocationCoordinate2D(latitude: 35.647442, longitude: 139.734305), CLLocationCoordinate2D(latitude: 35.647023, longitude: 139.738682), CLLocationCoordinate2D(latitude: 35.644599, longitude: 139.735356)]
     
     
     
@@ -60,13 +64,17 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
             pins.append(pin)
         }
         label.text = artistName
+        Imageview.image = artistphoto
+        labelMusic1.setTitle(demo1, for: .normal)
+        labelMusic2.setTitle(demo2, for: .normal)
+        labelMusic3.setTitle(demo3, for: .normal)
         
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 3.0
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        performSegue(withIdentifier: "tapped", sender: self)
+        performSegue(withIdentifier: "golive", sender: self)
         //        firstindexで1個目から見てみてwhereの中がtrueになるものを探す　$0 一つ目の引数　　mkplaxemark
     }
     //
@@ -123,7 +131,11 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
      // Pass the selected object to the new view controller.
      }
      */
-    
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let vo = segue.destination as! GuideViewController
+            vo.DestinationLocation = artistLocation!
+        }
+
 }
 
 

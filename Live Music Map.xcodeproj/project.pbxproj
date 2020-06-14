@@ -118,11 +118,11 @@
 				19CF71F52478438F0030C461 /* AppDelegate.swift */,
 				19CF71F72478438F0030C461 /* SceneDelegate.swift */,
 				19CF71F92478438F0030C461 /* ViewController.swift */,
+				197C06DC247D73B2004C27EE /* DetailViewController.swift */,
 				19CF71FB2478438F0030C461 /* Main.storyboard */,
 				19CF71FE247843950030C461 /* Assets.xcassets */,
 				19CF7200247843950030C461 /* LaunchScreen.storyboard */,
 				19CF7203247843950030C461 /* Info.plist */,
-				197C06DC247D73B2004C27EE /* DetailViewController.swift */,
 				197C06DE247D9205004C27EE /* GuideViewController.swift */,
 			);
 			path = "Live Music Map";

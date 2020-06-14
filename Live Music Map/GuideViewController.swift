@@ -16,7 +16,8 @@ class GuideViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     
     var locationManager = CLLocationManager()
     var pins = [MKPlacemark]()
-    var artistLocation : Int?
+    var DestinationLocation : Int?
+     let coordinates = [CLLocationCoordinate2D(latitude: 35.647442, longitude: 139.734305), CLLocationCoordinate2D(latitude: 35.647023, longitude: 139.738682), CLLocationCoordinate2D(latitude: 35.644599, longitude: 139.735356)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +35,9 @@ class GuideViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         locationManager.startUpdatingLocation()
         self.locationManager.startUpdatingHeading()
         
-        let latitudes = [35.6582, 35.6576, 35.332820]
-        let longitudes = [139.7018, 139.7019, 139.447457]
         
-        for i in 0..<latitudes.count{
-            let pin = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: latitudes[i], longitude: longitudes[i]))
+        for i in 0..<coordinates.count{
+            let pin = MKPlacemark(coordinate: coordinates[i])
             mapView.addAnnotation(pin)
             pins.append(pin)
         }
@@ -59,7 +58,7 @@ class GuideViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let directionRequest = MKDirections.Request()
         directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: locations[0].coordinate))
-        directionRequest.destination = MKMapItem (placemark: pins[artistLocation!])
+        directionRequest.destination = MKMapItem (placemark: pins[DestinationLocation!])
         directionRequest.transportType = .walking
         
         let directions = MKDirections(request: directionRequest)

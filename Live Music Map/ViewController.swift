@@ -51,7 +51,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var inputText: UISearchBar!
     //    @IBOutlet weak var Map: MKMapView!
     
-    let coordinates = [CLLocationCoordinate2D(latitude: 35.6582, longitude: 139.7018), CLLocationCoordinate2D(latitude: 35.6576, longitude: 139.7019), CLLocationCoordinate2D(latitude: 35.332820, longitude: 139.447457)]
+    let coordinates = [CLLocationCoordinate2D(latitude: 35.647442, longitude: 139.734305), CLLocationCoordinate2D(latitude: 35.647023, longitude: 139.738682), CLLocationCoordinate2D(latitude: 35.644599, longitude: 139.735356)]
     
     
     override func viewDidLoad() {
@@ -96,11 +96,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBAction func back(sender: UIStoryboardSegue){
     }
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        
-        performSegue(withIdentifier: "tapped", sender: self)
         coordinates.firstIndex(where: {$0.latitude == view.annotation!.coordinate.latitude && $0.longitude == view.annotation!.coordinate.longitude})
         pinInformation = coordinates.firstIndex(where: {$0.latitude == view.annotation!.coordinate.latitude && $0.longitude == view.annotation!.coordinate.longitude})
-        print(pinInformation!)
+        performSegue(withIdentifier: "tapped", sender: self)
     }
     var pinInformation :Int?
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
@@ -149,16 +147,30 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         vc.artistLocation = pinInformation!
         switch pinInformation! {
         case 0:
-            vc.artistName = "Masaki"
+            vc.artistName = "牛乳少年"
+            vc.artistphoto = UIImage(named: "milkboy")
+            vc.demo1 = "もなか"
+            vc.demo2 = "コーンフレーク"
+            vc.demo3 = "サイゼ"
         case 1:
-            vc.artistName = "Kazuya"
+            vc.artistName = "Yonetu Kenzi"
+            vc.artistphoto = UIImage(named: "kenshi")
+            vc.demo1 = "馬と鹿"
+            vc.demo2 = "ピースサイン"
+            vc.demo3 = "Lemon"
         case 2:
-            vc.artistName = "Masami"
+            vc.artistName = "愛みょん"
+            vc.artistphoto = UIImage(named: "aimyonn")
+            vc.demo1 = "マリーゴールド"
+            vc.demo2 = "愛を伝えたいだとか"
+            vc.demo3 = "君はロックを聴かない"
         default:
             vc.artistName = "NO NAME"
+            vc.artistphoto = UIImage(named: "appIcon")
+            vc.demo1 = "NO DEMO"
+            vc.demo2 = "NO DEMO"
+            vc.demo3 = "NO DEMO"
         }
-        let vo = segue.destination as! GuideViewController
-        vo.artistLocation = pinInformation!
     }
 }
 

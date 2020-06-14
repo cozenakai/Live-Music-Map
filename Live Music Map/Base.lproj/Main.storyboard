@@ -21,29 +21,17 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Bln-ka-pmy"/>
                                 </connections>
                             </mapView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="g93-ke-nga">
-                                <rect key="frame" x="0.0" y="54" width="414" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="86z-yl-F6b"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="g93-ke-nga" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="54X-oI-MbC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x81-aY-79n" secondAttribute="bottom" id="AxZ-vD-Fju"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x81-aY-79n" secondAttribute="trailing" id="F0x-t8-U1B"/>
-                            <constraint firstItem="g93-ke-nga" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dhL-m0-KKe"/>
-                            <constraint firstItem="g93-ke-nga" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qMN-6L-kov"/>
                             <constraint firstItem="x81-aY-79n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ra5-YT-67p"/>
                             <constraint firstItem="x81-aY-79n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wyh-9I-YIp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="inputText" destination="g93-ke-nga" id="ftE-bA-kMu"/>
                         <outlet property="mapView" destination="x81-aY-79n" id="Mmd-LS-hcf"/>
                         <segue destination="RXu-3N-0uy" kind="show" identifier="tapped" id="Kv3-6K-7mn"/>
                     </connections>
@@ -121,7 +109,7 @@
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5Sy-Pd-yEN" kind="show" id="CIB-wy-d9v"/>
+                                    <segue destination="5Sy-Pd-yEN" kind="show" identifier="golive" id="CIB-wy-d9v"/>
                                 </connections>
                             </button>
                         </subviews>
