@@ -49,12 +49,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r03-Pr-aDv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="378"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="341"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngj-OK-XEm">
                                         <rect key="frame" x="0.0" y="10" width="414" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="DOy-d7-ZBo">
@@ -71,23 +71,16 @@
                                         <rect key="frame" x="0.0" y="280.5" width="414" height="30"/>
                                         <state key="normal" title="Demo"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8LS-vy-zap">
-                                        <rect key="frame" x="0.0" y="340.5" width="414" height="30"/>
-                                        <state key="normal" title="Demo"/>
-                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="378" id="2G8-gT-nIp"/>
+                                    <constraint firstAttribute="height" constant="341" id="2G8-gT-nIp"/>
                                     <constraint firstAttribute="trailing" secondItem="ngj-OK-XEm" secondAttribute="trailing" id="A1G-13-hTB"/>
                                     <constraint firstItem="ngj-OK-XEm" firstAttribute="top" secondItem="r03-Pr-aDv" secondAttribute="top" constant="10" id="AYw-RH-Urn"/>
                                     <constraint firstItem="xHM-FR-z4q" firstAttribute="leading" secondItem="r03-Pr-aDv" secondAttribute="leading" id="BDZ-sd-Fk5"/>
-                                    <constraint firstItem="8LS-vy-zap" firstAttribute="leading" secondItem="r03-Pr-aDv" secondAttribute="leading" id="FXk-71-xWG"/>
                                     <constraint firstItem="bmh-PW-7kU" firstAttribute="leading" secondItem="r03-Pr-aDv" secondAttribute="leading" id="GRK-zP-fx1"/>
-                                    <constraint firstAttribute="trailing" secondItem="8LS-vy-zap" secondAttribute="trailing" id="PLP-n6-anx"/>
                                     <constraint firstItem="DOy-d7-ZBo" firstAttribute="leading" secondItem="r03-Pr-aDv" secondAttribute="leading" constant="10" id="SCN-53-V8r"/>
                                     <constraint firstAttribute="trailing" secondItem="bmh-PW-7kU" secondAttribute="trailing" id="eJW-rk-Dbd"/>
-                                    <constraint firstItem="8LS-vy-zap" firstAttribute="top" secondItem="bmh-PW-7kU" secondAttribute="bottom" constant="30" id="hpo-DH-9cv"/>
                                     <constraint firstItem="DOy-d7-ZBo" firstAttribute="top" secondItem="ngj-OK-XEm" secondAttribute="bottom" constant="10" id="jbq-Ge-W8e"/>
                                     <constraint firstAttribute="trailing" secondItem="xHM-FR-z4q" secondAttribute="trailing" id="kjX-qQ-siF"/>
                                     <constraint firstAttribute="trailing" secondItem="DOy-d7-ZBo" secondAttribute="trailing" constant="10" id="lTv-Gh-HTb"/>
@@ -97,7 +90,7 @@
                                 </constraints>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yh7-2s-PYh">
-                                <rect key="frame" x="0.0" y="378" width="414" height="430"/>
+                                <rect key="frame" x="0.0" y="341" width="414" height="467"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5A-uI-ui3">
                                 <rect key="frame" x="85" y="729" width="244" height="60"/>
@@ -105,7 +98,7 @@
                                     <constraint firstAttribute="height" constant="60" id="c51-nh-DX4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Go Live!">
+                                <state key="normal" title="Go Live">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -135,7 +128,6 @@
                         <outlet property="label" destination="ngj-OK-XEm" id="bqy-M9-Xj2"/>
                         <outlet property="labelMusic1" destination="xHM-FR-z4q" id="dgV-tU-NZD"/>
                         <outlet property="labelMusic2" destination="bmh-PW-7kU" id="BKz-k3-KcA"/>
-                        <outlet property="labelMusic3" destination="8LS-vy-zap" id="9io-LY-MqL"/>
                         <outlet property="mapView" destination="yh7-2s-PYh" id="S4b-v6-uxy"/>
                     </connections>
                 </viewController>

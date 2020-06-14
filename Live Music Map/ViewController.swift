@@ -61,6 +61,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.distanceFilter = 5
+        self.locationManager.pausesLocationUpdatesAutomatically = true
+        self.locationManager.activityType = CLActivityType.fitness
+        
         
         if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.notDetermined{
             
@@ -151,25 +154,21 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             vc.artistphoto = UIImage(named: "milkboy")
             vc.demo1 = "もなか"
             vc.demo2 = "コーンフレーク"
-            vc.demo3 = "サイゼ"
         case 1:
             vc.artistName = "Yonetu Kenzi"
-            vc.artistphoto = UIImage(named: "kenshi")
-            vc.demo1 = "馬と鹿"
-            vc.demo2 = "ピースサイン"
-            vc.demo3 = "Lemon"
+            vc.artistphoto = UIImage(named: "yozezu")
+            vc.demo1 = "Lemon"
+            vc.demo2 = "馬と鹿"
         case 2:
             vc.artistName = "愛みょん"
             vc.artistphoto = UIImage(named: "aimyonn")
             vc.demo1 = "マリーゴールド"
             vc.demo2 = "愛を伝えたいだとか"
-            vc.demo3 = "君はロックを聴かない"
         default:
             vc.artistName = "NO NAME"
             vc.artistphoto = UIImage(named: "appIcon")
             vc.demo1 = "NO DEMO"
             vc.demo2 = "NO DEMO"
-            vc.demo3 = "NO DEMO"
         }
     }
 }

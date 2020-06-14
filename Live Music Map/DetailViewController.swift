@@ -19,7 +19,6 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     @IBOutlet weak var Imageview: UIImageView!
     @IBOutlet weak var labelMusic1: UIButton!
     @IBOutlet weak var labelMusic2: UIButton!
-    @IBOutlet weak var labelMusic3: UIButton!
     
     var locationManager = CLLocationManager()
     var pins = [MKPlacemark]()
@@ -27,10 +26,9 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     var artistphoto = UIImage(named: "")
     var demo1 = ""
     var demo2 = ""
-    var demo3 = ""
     
     var artistLocation : Int?
-     let coordinates = [CLLocationCoordinate2D(latitude: 35.647442, longitude: 139.734305), CLLocationCoordinate2D(latitude: 35.647023, longitude: 139.738682), CLLocationCoordinate2D(latitude: 35.644599, longitude: 139.735356)]
+    let coordinates = [CLLocationCoordinate2D(latitude: 35.647442, longitude: 139.734305), CLLocationCoordinate2D(latitude: 35.647023, longitude: 139.738682), CLLocationCoordinate2D(latitude: 35.644599, longitude: 139.735356)]
     
     
     
@@ -67,10 +65,9 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         Imageview.image = artistphoto
         labelMusic1.setTitle(demo1, for: .normal)
         labelMusic2.setTitle(demo2, for: .normal)
-        labelMusic3.setTitle(demo3, for: .normal)
         
-        button.layer.borderColor = UIColor.black.cgColor
-        button.layer.borderWidth = 3.0
+        //        button.layer.borderColor = UIColor.black.cgColor
+        //        button.layer.borderWidth = 3.0
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
@@ -113,8 +110,8 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer{
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor.blue
-        renderer.lineWidth = 8.0
+        renderer.strokeColor = UIColor.red
+        renderer.lineWidth = 7.0
         return renderer
     }
     
@@ -131,11 +128,11 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
      // Pass the selected object to the new view controller.
      }
      */
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let vo = segue.destination as! GuideViewController
-            vo.DestinationLocation = artistLocation!
-        }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vo = segue.destination as! GuideViewController
+        vo.DestinationLocation = artistLocation!
+    }
+    
 }
 
 
