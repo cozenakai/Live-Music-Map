@@ -66,13 +66,19 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHM-FR-z4q">
                                         <rect key="frame" x="0.0" y="220.5" width="414" height="30"/>
                                         <state key="normal" title="Demo"/>
+                                        <connections>
+                                            <action selector="tapDemo1:" destination="RXu-3N-0uy" eventType="touchUpInside" id="af2-El-yBw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmh-PW-7kU">
                                         <rect key="frame" x="0.0" y="280.5" width="414" height="30"/>
                                         <state key="normal" title="Demo"/>
+                                        <connections>
+                                            <action selector="tapDemo2:" destination="RXu-3N-0uy" eventType="touchUpInside" id="7Ai-xO-NIi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="341" id="2G8-gT-nIp"/>
                                     <constraint firstAttribute="trailing" secondItem="ngj-OK-XEm" secondAttribute="trailing" id="A1G-13-hTB"/>

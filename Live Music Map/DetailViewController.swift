@@ -25,7 +25,9 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     var artistName = ""
     var artistphoto = UIImage(named: "")
     var demo1 = ""
+    var url1 = URL(string:"")
     var demo2 = ""
+    var url2 = URL(string:"")
     
     var artistLocation : Int?
     let coordinates = [CLLocationCoordinate2D(latitude: 35.647442, longitude: 139.734305), CLLocationCoordinate2D(latitude: 35.647023, longitude: 139.738682), CLLocationCoordinate2D(latitude: 35.644599, longitude: 139.735356)]
@@ -66,8 +68,18 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         labelMusic1.setTitle(demo1, for: .normal)
         labelMusic2.setTitle(demo2, for: .normal)
         
+        
         //        button.layer.borderColor = UIColor.black.cgColor
         //        button.layer.borderWidth = 3.0
+    }
+    //    let request = URLRequest(url: url!)
+    @IBAction func tapDemo1(_ sender: Any){
+        let request1 = URLRequest(url: url1!)
+        UIApplication.shared.openURL(url1!)
+    }
+    @IBAction func tapDemo2(_ sender: Any){
+        let request2 = URLRequest(url: url2!)
+        UIApplication.shared.openURL(url2!)
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
@@ -110,7 +122,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer{
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor.red
+        renderer.strokeColor = UIColor.blue
         renderer.lineWidth = 7.0
         return renderer
     }

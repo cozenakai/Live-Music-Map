@@ -153,17 +153,23 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             vc.artistName = "牛乳少年"
             vc.artistphoto = UIImage(named: "milkboy")
             vc.demo1 = "もなか"
+            vc.url1 = URL(string:"https://www.youtube.com/watch?v=wobSUaDPKpc&feature=emb_title")
             vc.demo2 = "コーンフレーク"
+            vc.url2 = URL(string:"https://www.youtube.com/watch?v=gyETeUHyXl4")
         case 1:
             vc.artistName = "Yonetu Kenzi"
             vc.artistphoto = UIImage(named: "yozezu")
             vc.demo1 = "Lemon"
+            vc.url1 = URL(string:"https://www.youtube.com/watch?v=SX_ViT4Ra7k")
             vc.demo2 = "馬と鹿"
+            vc.url2 = URL(string:"https://www.youtube.com/watch?v=ptnYBctoexk")
         case 2:
             vc.artistName = "愛みょん"
             vc.artistphoto = UIImage(named: "aimyonn")
             vc.demo1 = "マリーゴールド"
+            vc.url1 = URL(string:"https://www.youtube.com/watch?v=0xSiBpUdW4E")
             vc.demo2 = "愛を伝えたいだとか"
+            vc.url2 = URL(string:"https://www.youtube.com/watch?v=9qRCARM_LfE")
         default:
             vc.artistName = "NO NAME"
             vc.artistphoto = UIImage(named: "appIcon")
