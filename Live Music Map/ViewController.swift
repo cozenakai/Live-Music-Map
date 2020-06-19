@@ -48,10 +48,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     @IBOutlet var mapView:MKMapView!
     var locationManager = CLLocationManager()
-    @IBOutlet weak var inputText: UISearchBar!
+    //    @IBOutlet weak var inputText: UISearchBar!
     //    @IBOutlet weak var Map: MKMapView!
     
-    let coordinates = [CLLocationCoordinate2D(latitude: 35.647442, longitude: 139.734305), CLLocationCoordinate2D(latitude: 35.647023, longitude: 139.738682), CLLocationCoordinate2D(latitude: 35.644599, longitude: 139.735356)]
+    let coordinates = [CLLocationCoordinate2D(latitude: 35.659041, longitude: 139.700461), CLLocationCoordinate2D(latitude: 35.657452, longitude: 139.699919), CLLocationCoordinate2D(latitude: 35.658956, longitude: 139.697001),CLLocationCoordinate2D(latitude: 35.660538, longitude: 139.701336),CLLocationCoordinate2D(latitude:35.661087, longitude: 139.703653)]
     
     
     override func viewDidLoad() {
@@ -122,6 +122,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let region = MKCoordinateRegion(center: locations[0].coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
         mapView.setRegion(region, animated: false)
+        
     }
     
     //    長押しでピンをドロップ
@@ -150,22 +151,22 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         vc.artistLocation = pinInformation!
         switch pinInformation! {
         case 0:
-            vc.artistName = "牛乳少年"
-            vc.artistphoto = UIImage(named: "milkboy")
+            vc.artistName = "牛乳"
+            vc.artistphoto = UIImage(named: "milk")
             vc.demo1 = "もなか"
             vc.url1 = URL(string:"https://www.youtube.com/watch?v=wobSUaDPKpc&feature=emb_title")
             vc.demo2 = "コーンフレーク"
             vc.url2 = URL(string:"https://www.youtube.com/watch?v=gyETeUHyXl4")
         case 1:
-            vc.artistName = "Yonetu Kenzi"
-            vc.artistphoto = UIImage(named: "yozezu")
-            vc.demo1 = "Lemon"
+            vc.artistName = "麦津"
+            vc.artistphoto = UIImage(named: "photo")
+            vc.demo1 = "おれんじ"
             vc.url1 = URL(string:"https://www.youtube.com/watch?v=SX_ViT4Ra7k")
-            vc.demo2 = "馬と鹿"
+            vc.demo2 = "羊とたぬき"
             vc.url2 = URL(string:"https://www.youtube.com/watch?v=ptnYBctoexk")
         case 2:
-            vc.artistName = "愛みょん"
-            vc.artistphoto = UIImage(named: "aimyonn")
+            vc.artistName = "藍美"
+            vc.artistphoto = UIImage(named: "photo")
             vc.demo1 = "マリーゴールド"
             vc.url1 = URL(string:"https://www.youtube.com/watch?v=0xSiBpUdW4E")
             vc.demo2 = "愛を伝えたいだとか"

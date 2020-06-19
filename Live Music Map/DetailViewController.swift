@@ -30,7 +30,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     var url2 = URL(string:"")
     
     var artistLocation : Int?
-    let coordinates = [CLLocationCoordinate2D(latitude: 35.647442, longitude: 139.734305), CLLocationCoordinate2D(latitude: 35.647023, longitude: 139.738682), CLLocationCoordinate2D(latitude: 35.644599, longitude: 139.735356)]
+    let coordinates = [CLLocationCoordinate2D(latitude: 35.659041, longitude: 139.700461), CLLocationCoordinate2D(latitude: 35.657452, longitude: 139.699919), CLLocationCoordinate2D(latitude: 35.658956, longitude: 139.697001)]
     
     
     
