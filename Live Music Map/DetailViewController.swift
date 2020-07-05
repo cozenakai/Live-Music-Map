@@ -92,40 +92,40 @@ class DetailViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     //               mapView.setRegion(region, animated: false)
     //    }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let directionRequest = MKDirections.Request()
-        directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: locations[0].coordinate))
-        directionRequest.destination = MKMapItem (placemark: pins[artistLocation!])
-        directionRequest.transportType = .walking
-        
-        
-        let directions = MKDirections(request: directionRequest)
-        
-        directions.calculate { (response, error) in
-            guard let directionResponse = response else {
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-                return
-            }
-            print(directionResponse)
-            
-            let route = directionResponse.routes[0]
-            self.mapView.addOverlay(route.polyline, level: .aboveRoads)
-            
-            let rect = route.polyline.boundingMapRect
-            self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
-        }
-        
-    }
-    
-    
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer{
-        let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor.blue
-        renderer.lineWidth = 7.0
-        return renderer
-    }
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        let directionRequest = MKDirections.Request()
+//        directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: locations[0].coordinate))
+//        directionRequest.destination = MKMapItem (placemark: pins[artistLocation!])
+//        directionRequest.transportType = .walking
+//        
+//        
+//        let directions = MKDirections(request: directionRequest)
+//        
+//        directions.calculate { (response, error) in
+//            guard let directionResponse = response else {
+//                if let error = error {
+//                    print(error.localizedDescription)
+//                }
+//                return
+//            }
+//            print(directionResponse)
+//            
+//            let route = directionResponse.routes[0]
+//            self.mapView.addOverlay(route.polyline, level: .aboveRoads)
+//            
+//            let rect = route.polyline.boundingMapRect
+//            self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
+//        }
+//        
+//    }
+//    
+//    
+//    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer{
+//        let renderer = MKPolylineRenderer(overlay: overlay)
+//        renderer.strokeColor = UIColor.blue
+//        renderer.lineWidth = 7.0
+//        return renderer
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

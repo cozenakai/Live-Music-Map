@@ -78,17 +78,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         self.view.addSubview(mapView)
         
-        //        長押しの認識
-        //        let myLongPress: UILongPressGestureRecognizer = UILongPressGestureRecognizer()
-        //        myLongPress.addTarget(self, action: #selector(ViewController.recognizeLongPress(sender:)))
-        //        mapView.addGestureRecognizer(myLongPress)
+        //                長押しの認識
+        let myLongPress: UILongPressGestureRecognizer = UILongPressGestureRecognizer()
+        myLongPress.addTarget(self, action: #selector(ViewController.recognizeLongPress(sender:)))
+        mapView.addGestureRecognizer(myLongPress)
         
         
-        //        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude:35.658517, longitude: 139.70133399999997), latitudinalMeters: 500, longitudinalMeters: 500)
-        //        mapView.setRegion(region, animated: false)
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude:35.658517, longitude: 139.70133399999997), latitudinalMeters: 500, longitudinalMeters: 500)
+        mapView.setRegion(region, animated: false)
         
-        //        let latitudes = [35.6582, 35.6576, 35.332820]
-        //        let longitudes = [139.7018, 139.7019, 139.447457]
+        let latitudes = [35.6582, 35.6576, 35.332820]
+        let longitudes = [139.7018, 139.7019, 139.447457]
         
         for i in 0 ..< coordinates.count{
             let pin = MKPlacemark(coordinate: coordinates[i])
@@ -125,22 +125,22 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
     }
     
-    //    長押しでピンをドロップ
+    //        長押しでピンをドロップ
     
-    //    @ objc func recognizeLongPress(sender: UILongPressGestureRecognizer){
-    //        if sender.state != UIGestureRecognizer.State.began{
-    //            return
-    //        }
-    //        let mylocation = sender.location(in:mapView)
-    //        let myCoordinate: CLLocationCoordinate2D = mapView.convert(mylocation, toCoordinateFrom: mapView)
-    //        let myPin: MKPointAnnotation = MKPointAnnotation()
-    //
-    //        myPin.coordinate = myCoordinate
-    //        //        myPin.title = "[]"
-    //        //        myPin.subtitle = "[]"
-    //        mapView.addAnnotation(myPin)
-    //
-    //    }
+    @ objc func recognizeLongPress(sender: UILongPressGestureRecognizer){
+        if sender.state != UIGestureRecognizer.State.began{
+            return
+        }
+        let mylocation = sender.location(in:mapView)
+        let myCoordinate: CLLocationCoordinate2D = mapView.convert(mylocation, toCoordinateFrom: mapView)
+        let myPin: MKPointAnnotation = MKPointAnnotation()
+        
+        myPin.coordinate = myCoordinate
+        //        myPin.title = "[]"
+        //        myPin.subtitle = "[]"
+        mapView.addAnnotation(myPin)
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

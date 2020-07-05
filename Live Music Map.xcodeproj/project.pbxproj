@@ -41,7 +41,7 @@
 		1956D21224869C14004AC606 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		197C06DC247D73B2004C27EE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		197C06DE247D9205004C27EE /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
-		19CF71F22478438F0030C461 /* Live Music Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Live Music Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19CF71F22478438F0030C461 /* Life Music Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Life Music Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CF71F52478438F0030C461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19CF71F72478438F0030C461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		19CF71F92478438F0030C461 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		19CF71F32478438F0030C461 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19CF71F22478438F0030C461 /* Live Music Map.app */,
+				19CF71F22478438F0030C461 /* Life Music Map.app */,
 				19CF7208247843950030C461 /* Live Music MapTests.xctest */,
 				19CF7213247843950030C461 /* Live Music MapUITests.xctest */,
 			);
@@ -163,7 +163,7 @@
 			);
 			name = "Live Music Map";
 			productName = "Live Music Map";
-			productReference = 19CF71F22478438F0030C461 /* Live Music Map.app */;
+			productReference = 19CF71F22478438F0030C461 /* Life Music Map.app */;
 			productType = "com.apple.product-type.application";
 		};
 		19CF7207247843950030C461 /* Live Music MapTests */ = {
@@ -454,19 +454,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.1.1;
+				CURRENT_PROJECT_VERSION = 1.1.3;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 2K446D59RQ;
 				INFOPLIST_FILE = "Live Music Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.lifeistech.Live-Music-Map";
-				PRODUCT_NAME = "Live Music Map";
-				PROVISIONING_PROFILE_SPECIFIER = "L12-MasakiChonan-Development";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "app.shinjikun.chonan.Live-Music-Map";
+				PRODUCT_NAME = "Life Music Map";
+				PROVISIONING_PROFILE_SPECIFIER = "L12-Shinjikun-Distribution";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -478,17 +479,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.1.1;
+				CURRENT_PROJECT_VERSION = 1.1.3;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 2K446D59RQ;
 				INFOPLIST_FILE = "Live Music Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.lifeistech.Live-Music-Map";
-				PRODUCT_NAME = "Live Music Map";
-				PROVISIONING_PROFILE_SPECIFIER = "L12MasakiChonan-Distribution";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "app.shinjikun.chonan.Live-Music-Map";
+				PRODUCT_NAME = "Life Music Map";
+				PROVISIONING_PROFILE_SPECIFIER = "L12-Shinjikun-Distribution";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
